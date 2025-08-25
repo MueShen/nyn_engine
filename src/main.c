@@ -4,6 +4,7 @@
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height){	
+ (void)window; //simple discard
 	glViewport(0,0,width,height);		
 }
 
@@ -19,16 +20,17 @@ int main (){
 		glfwTerminate();
 		return -1;
 	}
-	glfwMakeContextCurrent(window);
+	glfwMakeContextCurrent(window); //init of statemachibe, setting window as curre t context, all other commands will be addressing this window 
 	
-	//glad init
+	//glad init (extensions a d function pointers)
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
 		printf("Failed to initialize GLAD\n");
 		return -1;
 	}    
 	glViewport(0,0,800,600);
-	glfwSetFramebufferSizeCallback(window,framebuffer_size_callback);
+
+//onWindowSizeChange	glfwSetFramebufferSizeCallback(window,framebuffer_size_callback);
 	while(!glfwWindowShouldClose(window))
 	{
 		glfwSwapBuffers(window);
