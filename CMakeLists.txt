@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(cyt_engine LANGUAGES C)
+project(nyn_engine LANGUAGES C)
 
 
 find_package(OpenGL)
