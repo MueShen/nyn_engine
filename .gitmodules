@@ -1,0 +1,4 @@
+[submodule "vendor/glfw-3.4"]
+	path = vendor/glfw-3.4
+	url = https://github.com/glfw/glfw.git
+	branch = latest
